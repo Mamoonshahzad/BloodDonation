@@ -58,7 +58,7 @@ class _OrderBloodState extends State<OrderBlood> {
                       builder: (BuildContext context) {
                         return AlertDialog(
                           content: Image.asset(
-                            'assets/images/SuccessCompleted.png', // Replace with your image path
+                            'assets/images/SuccessCompleted.png',
                             fit: BoxFit.cover,
                           ),
                           actions: [
@@ -88,7 +88,7 @@ class _OrderBloodState extends State<OrderBlood> {
                   child: Text(
                     'Request',
                     style: GoogleFonts.poppins(
-                        color: Colors.white, // Button text color
+                        color: Colors.white,
                         fontSize: 18,
                         fontWeight: FontWeight.bold),
                   ),
@@ -124,16 +124,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: Container(
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(2),
-            boxShadow: const [
-              BoxShadow(
-                  color: Colors.grey,
-                  spreadRadius: 2,
-                  blurRadius: 2,
-                  offset: Offset(0, 2))
-            ]),
+        decoration: const BoxDecoration(
+            boxShadow: [BoxShadow(color: Colors.black26, blurRadius: 10.0)],
+            color: Colors.white),
         child: Row(
           children: <Widget>[
             Padding(

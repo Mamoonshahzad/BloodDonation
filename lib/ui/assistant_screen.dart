@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AssistantScreen extends StatefulWidget {
   const AssistantScreen({super.key});
@@ -11,24 +12,27 @@ class _AssistantScreenState extends State<AssistantScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:
-          AppBar(centerTitle: true, title: const Text("Assistant"), actions: [
-        Padding(
-          padding: const EdgeInsets.only(right: 20),
-          child: SizedBox(
-            height: 35,
-            width: 35,
-            child: Container(
-              decoration: BoxDecoration(
-                  color: Colors.red, borderRadius: BorderRadius.circular(8)),
-              child: const Icon(
-                Icons.help_outline,
-                color: Colors.white,
+      appBar: AppBar(
+          centerTitle: true,
+          title: Text("Assistant", style: GoogleFonts.poppins()),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: SizedBox(
+                height: 35,
+                width: 35,
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(8)),
+                  child: const Icon(
+                    Icons.help_outline,
+                    color: Colors.white,
+                  ),
+                ),
               ),
-            ),
-          ),
-        )
-      ]),
+            )
+          ]),
       body: SingleChildScrollView(
         child: SizedBox(
           width: MediaQuery.of(context).size.width,
@@ -85,40 +89,37 @@ class _AssistantScreenState extends State<AssistantScreen> {
                                 borderRadius: BorderRadius.circular(10),
                                 color: Colors.black12,
                               ),
-                              child: const Center(
-                                child: Padding(
-                                  padding: EdgeInsets.only(left: 8.0),
-                                  child: Text(
-                                    "Good Morning, Fahim. Choose one of the following options to get started.",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 16),
-                                  ),
+                              child: Center(
+                                child: Text(
+                                  "Good Morning, Fahim. Choose one of the following options to get started.",
+                                  style: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 16),
                                 ),
                               ),
                             ),
                             const SizedBox(height: 6),
-                            const Text(
+                            Text(
                               "Check Donate Instructions",
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w500,
-                                  fontSize: 18,
+                                  fontSize: 16,
                                   color: Colors.red),
                             ),
                             const Divider(color: Colors.black12),
-                            const Text(
+                            Text(
                               "Check Donate Instructions",
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w500,
-                                  fontSize: 18,
+                                  fontSize: 16,
                                   color: Colors.red),
                             ),
                             const Divider(color: Colors.black12),
-                            const Text(
+                            Text(
                               "Check Donate Instructions",
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w500,
-                                  fontSize: 18,
+                                  fontSize: 16,
                                   color: Colors.red),
                             ),
                           ],
@@ -131,17 +132,16 @@ class _AssistantScreenState extends State<AssistantScreen> {
                 Padding(
                   padding: const EdgeInsets.only(left: 85),
                   child: Container(
-                    width: 240,
                     height: 50,
                     decoration: BoxDecoration(
                         color: Colors.red,
                         borderRadius: BorderRadius.circular(12)),
-                    child: const Center(
+                    child: Center(
                       child: Text(
                         "Check donate instruction",
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w500,
-                            fontSize: 17,
+                            fontSize: 16,
                             color: Colors.white),
                       ),
                     ),
@@ -172,21 +172,17 @@ class _AssistantScreenState extends State<AssistantScreen> {
                       width: 10,
                     ),
                     Container(
-                      width: 190,
                       height: 40,
                       decoration: BoxDecoration(
                           color: Colors.black12,
                           borderRadius: BorderRadius.circular(12)),
-                      child: const Center(
-                        child: Padding(
-                          padding: EdgeInsets.only(left: 10, right: 10),
-                          child: Text(
-                            "That's Great Mamoon",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 17,
-                                color: Colors.black),
-                          ),
+                      child: Center(
+                        child: Text(
+                          "That's Great Mamoon",
+                          style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                              color: Colors.black),
                         ),
                       ),
                     ),
@@ -201,13 +197,13 @@ class _AssistantScreenState extends State<AssistantScreen> {
                     decoration: BoxDecoration(
                         color: Colors.black12,
                         borderRadius: BorderRadius.circular(10)),
-                    child: const Center(
+                    child: Center(
                       child: Padding(
-                        padding: EdgeInsets.only(left: 10, right: 10),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Text(
                           "Can you tell me the group of your blood?",
-                          style: TextStyle(
-                              fontSize: 17, fontWeight: FontWeight.w500),
+                          style: GoogleFonts.poppins(
+                              fontSize: 16, fontWeight: FontWeight.w500),
                         ),
                       ),
                     ),
@@ -222,10 +218,10 @@ class _AssistantScreenState extends State<AssistantScreen> {
                     decoration: BoxDecoration(
                         color: Colors.red,
                         borderRadius: BorderRadius.circular(12)),
-                    child: const Center(
+                    child: Center(
                       child: Text(
                         "AB+",
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w500,
                             fontSize: 17,
                             color: Colors.white),
