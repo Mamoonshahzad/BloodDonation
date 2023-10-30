@@ -1,7 +1,9 @@
 import 'package:blood_donation_app/ui/profile_screen.dart';
+import 'package:blood_donation_app/widgets/home_screen_grid.dart';
 import 'package:blood_donation_app/widgets/reusable_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'donation_requests.dart';
 import 'home_screen.dart';
@@ -84,24 +86,23 @@ class _SearchScreenState extends State<SearchScreen> {
                       ),
                     ],
                   ),
-                  child: const Column(
+                  child: Column(
                     children: [
-                      SizedBox(
-                        height: 10,
-                      ),
+                      const SizedBox(height: 10),
                       Text(
                         "Filters",
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.black54),
                       ),
-                      Divider(
-                        color: Colors.black12,
-                      ),
+                      const Divider(color: Colors.black12),
                       ExpansionTile(
-                        title: Text("Blood Type"),
-                        children: [
+                        title: Text(
+                          "Blood Type",
+                          style: GoogleFonts.poppins(),
+                        ),
+                        children: const [
                           Padding(
                             padding: EdgeInsets.all(8.0),
                             child: Row(
@@ -144,28 +145,28 @@ class _SearchScreenState extends State<SearchScreen> {
                           )
                         ],
                       ),
-                      Divider(
+                      const Divider(
                         color: Colors.black12,
                       ),
                       ExpansionTile(
-                        title: Text("Location"),
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                LocationContainer(
-                                    basicColor: Colors.black12,
-                                    location: "Rawalpindi"),
-                                LocationContainer(
-                                    basicColor: Colors.black12,
-                                    location: "Islamabad"),
-                                LocationContainer(
-                                    basicColor: Colors.black12,
-                                    location: "DIKhan")
-                              ],
-                            ),
+                        title: Text(
+                          "Location",
+                          style: GoogleFonts.poppins(),
+                        ),
+                        children: const [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              LocationContainer(
+                                  basicColor: Colors.black12,
+                                  location: "Rawalpindi"),
+                              LocationContainer(
+                                  basicColor: Colors.black12,
+                                  location: "Islamabad"),
+                              LocationContainer(
+                                  basicColor: Colors.black12,
+                                  location: "DIKhan")
+                            ],
                           ),
                           Padding(
                             padding: EdgeInsets.all(8.0),
@@ -186,29 +187,26 @@ class _SearchScreenState extends State<SearchScreen> {
                           )
                         ],
                       ),
-                      Divider(
+                      const Divider(
                         color: Colors.black12,
                       ),
                       ExpansionTile(
-                        title: Text("Blood Bank"),
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                LocationContainer(
-                                    basicColor: Colors.black12,
-                                    location: "Lahore Blood Bank"),
-                                LocationContainer(
-                                    basicColor: Colors.black12,
-                                    location: "GCU Blood Bank")
-                              ],
-                            ),
+                        title: Text("Blood Bank", style: GoogleFonts.poppins()),
+                        children: const [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              LocationContainer(
+                                  basicColor: Colors.black12,
+                                  location: "Lahore Blood Bank"),
+                              LocationContainer(
+                                  basicColor: Colors.black12,
+                                  location: "GCU Blood Bank")
+                            ],
                           )
                         ],
                       ),
-                      Divider(
+                      const Divider(
                         color: Colors.black12,
                       ),
                     ],
@@ -311,7 +309,10 @@ class _BloodTypeContainerState extends State<BloodTypeContainer> {
           color: backgroundColor,
         ),
         child: Center(
-          child: Text(widget.bloodGroup),
+          child: Text(
+            widget.bloodGroup,
+            style: GoogleFonts.poppins(),
+          ),
         ),
       ),
     );
@@ -359,7 +360,7 @@ class _LocationContainerState extends State<LocationContainer> {
         child: Center(
           child: Padding(
             padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-            child: Text(widget.location),
+            child: Text(widget.location, style: GoogleFonts.poppins()),
           ),
         ),
       ),

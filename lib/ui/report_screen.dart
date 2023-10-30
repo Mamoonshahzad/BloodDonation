@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ReportScreen extends StatefulWidget {
   const ReportScreen({super.key});
@@ -17,34 +18,37 @@ class _ReportScreenState extends State<ReportScreen> {
         title: const Text("Report Screen"),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 22,
-            ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [Icon(Icons.location_on), Text("Research Center")],
-            ),
-            const SizedBox(
-              height: 9,
-            ),
-            const Center(child: Text("Dhaka Medical College, Dhaka")),
-            const SizedBox(
-              height: 22,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 60),
-              child: SizedBox(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 22,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(Icons.location_on),
+                  Text("Research Center", style: GoogleFonts.poppins())
+                ],
+              ),
+              const SizedBox(
+                height: 9,
+              ),
+              Center(
+                  child: Text("Dhaka Medical College, Dhaka",
+                      style: GoogleFonts.poppins())),
+              const SizedBox(
+                height: 22,
+              ),
+              Container(
+                margin: const EdgeInsets.only(right: 60),
                 height: 250,
                 width: 250,
                 child: Image.asset("assets/images/Flask.png"),
               ),
-            ),
-            const SizedBox(height: 22),
-            const Padding(
-              padding: EdgeInsets.only(right: 14, left: 14),
-              child: Row(
+              const SizedBox(height: 22),
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ReusableContainer(text1: "6 mmol/L", text2: "Glucose"),
@@ -52,11 +56,8 @@ class _ReportScreenState extends State<ReportScreen> {
                   ReusableContainer(text1: "12 mmol/L", text2: "Bilirubin"),
                 ],
               ),
-            ),
-            const SizedBox(height: 22),
-            const Padding(
-              padding: EdgeInsets.only(right: 14, left: 14),
-              child: Row(
+              const SizedBox(height: 22),
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ReusableContainer(text1: "   3 ml/L  ", text2: " RBC "),
@@ -64,24 +65,24 @@ class _ReportScreenState extends State<ReportScreen> {
                   ReusableContainer(text1: "  276 bL   ", text2: "Platelets"),
                 ],
               ),
-            ),
-            const SizedBox(
-              height: 66,
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+              const SizedBox(
+                height: 66,
               ),
-              child: const Text(
-                "My Report",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.white),
-              ),
-            )
-          ],
+              ElevatedButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                ),
+                child: Text(
+                  "My Report",
+                  style: GoogleFonts.poppins(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      color: Colors.white),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -98,9 +99,8 @@ class ReusableContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 107,
+      width: 100,
       height: 68,
-      padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
@@ -108,17 +108,17 @@ class ReusableContainer extends StatelessWidget {
             color: Colors.grey.withOpacity(0.5),
             spreadRadius: 2,
             blurRadius: 5,
-            offset: const Offset(0, 3), // changes the position of the shadow
           ),
         ],
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             text1,
-            style: const TextStyle(
+            style: GoogleFonts.poppins(
               fontSize: 15,
               fontWeight: FontWeight.w500,
             ),
@@ -126,7 +126,7 @@ class ReusableContainer extends StatelessWidget {
           const SizedBox(height: 8),
           Text(
             text2,
-            style: const TextStyle(
+            style: GoogleFonts.poppins(
               fontSize: 13,
               color: Colors.grey,
             ),
