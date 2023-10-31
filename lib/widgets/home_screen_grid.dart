@@ -19,17 +19,6 @@ class HomeScreenGrid extends StatelessWidget {
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.all(Radius.circular(10.0)),
           color: Colors.white),
-      // decoration: BoxDecoration(
-      //     borderRadius: BorderRadius.circular(10),
-      //     color: Colors.white,
-      //     boxShadow: const [
-      //       BoxShadow(
-      //         spreadRadius: 0.5,
-      //         blurRadius: 1,
-      //         color: Colors.grey,
-      //         offset: Offset(0, 4),
-      //       )
-      //     ]),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

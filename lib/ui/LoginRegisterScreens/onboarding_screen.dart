@@ -1,3 +1,4 @@
+import 'package:blood_donation_app/ui/LoginRegisterScreens/welcome_screen.dart';
 import 'package:blood_donation_app/ui/home_screen.dart';
 import 'package:blood_donation_app/widgets/constant_colors.dart';
 import 'package:flutter/material.dart';
@@ -97,8 +98,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        pageController.animateToPage(
-                            Get.to(const HomeScreen()) as int,
+                        pageController.animateToPage(1,
                             duration: const Duration(milliseconds: 500),
                             curve: Curves.ease);
                       },
@@ -145,9 +145,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       fontWeight: FontWeight.w500),
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 10),
               row(),
               const Spacer(),
               Expanded(
@@ -174,7 +172,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        pageController.animateToPage(2,
+                        pageController.animateToPage(
+                            Get.to(const WelcomeScreen()) as int,
                             duration: const Duration(milliseconds: 500),
                             curve: Curves.ease);
                       },

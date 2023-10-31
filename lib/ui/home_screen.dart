@@ -222,7 +222,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             gridIcon: 'assets/icons/Report.svg'),
                       ),
                       GestureDetector(
-                        onTap: () => const CampaignScreen(),
+                        onTap: () => Get.to(const CampaignScreen()),
                         child: const HomeScreenGrid(
                             gridText: 'Campaign',
                             gridIcon: 'assets/icons/Campaign.svg'),
@@ -334,57 +334,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   currentIndex: _selectedIndex, // Set the current selected index
-      //   onTap: (int index) {
-      //     if (index == 0) {
-      //       Get.to(const HomeScreen());
-      //     } else if (index == 1) {
-      //       Get.to(const SearchScreen());
-      //     } else if (index == 2) {
-      //       Get.to(const DonationRequestsScreen());
-      //     } else if (index == 3) {
-      //       Get.to(const ProfileScreen());
-      //     }
-      //     setState(() {
-      //       _selectedIndex = index;
-      //     });
-      //   },
-      //   selectedItemColor: Colors.red,
-      //   unselectedItemColor: Colors.grey,
-      //   showSelectedLabels: true,
-      //   showUnselectedLabels: true,
-      //   items: const [
-      //     BottomNavigationBarItem(
-      //       icon: Icon(
-      //         Icons.home,
-      //         color: Colors.red,
-      //       ),
-      //       label: "Home",
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(
-      //         Icons.search,
-      //         color: Colors.red,
-      //       ),
-      //       label: "Search",
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(
-      //         Icons.add_box_outlined,
-      //         color: Colors.red,
-      //       ),
-      //       label: "Requests",
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(
-      //         Icons.person,
-      //         color: Colors.red,
-      //       ),
-      //       label: "Profile",
-      //     ),
-      //   ],
-      // )
     );
   }
 }

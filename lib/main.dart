@@ -2,6 +2,8 @@ import 'package:blood_donation_app/ui/LoginRegisterScreens/forgot_password.dart'
 import 'package:blood_donation_app/ui/LoginRegisterScreens/login.dart';
 import 'package:blood_donation_app/ui/LoginRegisterScreens/register_screen.dart';
 import 'package:blood_donation_app/ui/LoginRegisterScreens/welcome_screen.dart';
+import 'package:blood_donation_app/ui/donate_screen.dart';
+import 'package:blood_donation_app/ui/edit_profile_screen.dart';
 import 'package:blood_donation_app/ui/find_donors_screen.dart';
 import 'package:blood_donation_app/ui/home_screen.dart';
 import 'package:blood_donation_app/ui/LoginRegisterScreens/onboarding_screen.dart';
@@ -13,6 +15,7 @@ import 'package:blood_donation_app/ui/LoginRegisterScreens/splash_screen.dart';
 import 'package:blood_donation_app/ui/youtube.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
